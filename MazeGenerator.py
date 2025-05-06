@@ -411,36 +411,6 @@ class MazeGenerator:
         print(f"Kruskal: {len(kruskal_states)} pasos, {kruskal_time:.4f} segundos")
         print(f"Recursive Backtracking: {len(rb_states)} pasos, {rb_time:.4f} segundos")
         
-        # Visualizar laberintos finales con entrada y salida marcadas
-        plt.figure(figsize=(12, 6))
-        
-        # Visualizar laberinto de Kruskal
-        plt.subplot(1, 2, 1)
-        kruskal_viz = np.copy(kruskal_final)
-        kruskal_viz[kruskal_entrance] = 3  # Entrada (verde)
-        kruskal_viz[kruskal_exit] = 4      # Salida (rojo)
-        cmap = ListedColormap(['white', 'black', 'lightblue', 'green', 'red'])
-        plt.imshow(kruskal_viz, cmap=cmap)
-        plt.title(f"Kruskal ({len(kruskal_states)} pasos)")
-        plt.axis('off')
-        
-        # Visualizar laberinto de Recursive Backtracking
-        plt.subplot(1, 2, 2)
-        rb_viz = np.copy(rb_final)
-        rb_viz[rb_entrance] = 3  # Entrada (verde)
-        rb_viz[rb_exit] = 4      # Salida (rojo)
-        plt.imshow(rb_viz, cmap=cmap)
-        plt.title(f"Recursive Backtracking ({len(rb_states)} pasos)")
-        plt.axis('off')
-        
-        # Agregar leyenda común
-        plt.figtext(0.5, 0.01, 
-                   "Colores: Negro=Pared, Blanco=Pasillo, Verde=Entrada, Rojo=Salida", 
-                   ha='center', fontsize=10)
-        
-        plt.tight_layout()
-        plt.show()
-        
         print("\nCreando animaciones...")
         
         # Actualizar atributos para las animaciones
@@ -460,7 +430,7 @@ class MazeGenerator:
             print("Animaciones guardadas como 'kruskal_maze.gif' y 'recursive_backtracking_maze.gif'")
 
         # Guardar imágenes de los laberintos finales
-        print("Guardando resultados finales como PNG")
+        print("\nGuardando resultados finales como PNG")
         self.entrance = kruskal_entrance
         self.exit = kruskal_exit
         self.grid = kruskal_final
@@ -472,14 +442,11 @@ class MazeGenerator:
         self.save_maze_image('./Maze_results/recursive_backtracking_maze.png', "Laberinto - Recursive Backtracking")
         print("Imágenes guardadas como 'kruskal_maze.png' y 'recursive_backtracking_maze.png'")
         
-        return kruskal_ani, rb_ani
+        return kruskal_final, rb_final
 
 # Ejemplo de uso
 if __name__ == "__main__":
     # Crear generador de laberintos
     generator = MazeGenerator(10, 10)
     
-    # Comparar algoritmos
-    kruskal_ani, rb_ani = generator.compare_algorithms(10, 10, save_animation=True)
-    
-    plt.show()
+    kruskal_maze, rb_maze = generator.compare_algorithms(10, 10, save_animation=True)
