@@ -212,31 +212,16 @@ class MazeGenerator:
 
     def _create_entrance_exit(self):
         """
-        Crea una entrada y una salida en el laberinto, en bordes opuestos.
+        Crea una entrada en (1, 1) y una salida en (2*self.height, 2*self.width) en el laberinto.
         """
-        # Determinar posición de la entrada (pared superior o izquierda)
-        entrance_side = random.choice(['top', 'left'])
+        # Entrada en la esquina superior izquierda (1, 1)
+        self.entrance = (1, 1)
+        self.grid[1, 1] = 0  # Asegurarse de que es un pasillo
         
-        if entrance_side == 'top':
-            # Entrada en la pared superior
-            col = random.randint(0, self.width - 1)
-            self.entrance = (0, 2*col + 1)
-            self.grid[0, 2*col + 1] = 0
-            
-            # Salida en la pared inferior
-            col = random.randint(0, self.width - 1)
-            self.exit = (2*self.height, 2*col + 1)
-            self.grid[2*self.height, 2*col + 1] = 0
-        else:
-            # Entrada en la pared izquierda
-            row = random.randint(0, self.height - 1)
-            self.entrance = (2*row + 1, 0)
-            self.grid[2*row + 1, 0] = 0
-            
-            # Salida en la pared derecha
-            row = random.randint(0, self.height - 1)
-            self.exit = (2*row + 1, 2*self.width)
-            self.grid[2*row + 1, 2*self.width] = 0
+        # Salida en la esquina inferior derecha (2*self.height, 2*self.width)
+        self.exit = (2*self.height-1, 2*self.width-1)
+        self.grid[2*self.height-1, 2*self.width-1] = 0  # Asegurarse de que es un pasillo
+
     
     def visualize_maze(self, title=None):
         """
