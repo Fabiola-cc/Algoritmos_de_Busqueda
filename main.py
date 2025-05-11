@@ -6,12 +6,6 @@ Archivo para ejecutar el proceso completo
 from MazeGenerator import MazeGenerator
 from MazeSolver import solve_maze_a_star, visualize_solution
 
-# Crear generador de laberintos
-generator = MazeGenerator(60, 80)
-
-# Generar y comparar los laberintos
-kruskal_maze, rb_maze = generator.compare_algorithms(60, 80, False)
-
 def logical_to_maze_coords(logical_coord):
     return (2 * logical_coord[0] + 1, 2 * logical_coord[1] + 1)
 
@@ -22,6 +16,16 @@ def get_start_end_from_maze_shape(maze):
     start = logical_to_maze_coords((0, 0))
     end = logical_to_maze_coords((logical_height - 1, logical_width - 1))
     return start, end
+
+# Crear generador de laberintos
+generator = MazeGenerator(10, 10)
+
+# Generar y comparar los laberintos
+kruskal_maze, rb_maze = generator.compare_algorithms(10, 10, True)
+
+generator2 = MazeGenerator(60, 80)
+
+kruskal_maze, rb_maze = generator2.compare_algorithms(60, 80, False)
 
 start, end = get_start_end_from_maze_shape(kruskal_maze)
 
