@@ -1,6 +1,3 @@
-import numpy as np
-from collections import deque
-import heapq
 from abc import ABC, abstractmethod
 
 class AlgoritmoBusqueda(ABC):
