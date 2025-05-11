@@ -1,6 +1,8 @@
 import heapq
 from matplotlib import colors
 import matplotlib.pyplot as plt
+import os
+
 
 def manhattan(a, b):
     return abs(a[0] - b[0]) + abs(a[1] - b[1])
@@ -8,6 +10,18 @@ def manhattan(a, b):
 
 def solve_maze_a_star(maze, start, end):
     height, width = maze.shape
+
+    # Verifica si el end es una pared
+    if maze[end] != 0:
+        for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            nx, ny = end[0] + dx, end[1] + dy
+            if 0 <= nx < height and 0 <= ny < width and maze[nx, ny] == 0:
+                end = (nx, ny)
+                break
+        else:
+            print(" No se encontró una celda adyacente libre para el punto de llegada.")
+            return [], []
+
     frontier = []
     heapq.heappush(frontier, (0, start))
     came_from = {start: None}
@@ -45,9 +59,13 @@ def solve_maze_a_star(maze, start, end):
     return explored, path
 
 
-def visualize_solution(maze, explored, path, start, end, title="Solución A*"):
-    cmap = colors.ListedColormap(['white', 'black', 'lightblue', 'green', 'red'])
-    norm = colors.BoundaryNorm([0, 0.5, 1.5, 2.5, 3.5, 5], cmap.N)
+
+def visualize_solution(maze, explored, path, start, end, title="Solución A*", filename="solucion.png"):
+    # Crear carpeta si no existe
+    os.makedirs("Maze_results", exist_ok=True)
+
+    cmap = colors.ListedColormap(['white', 'black', 'lightblue', 'green', 'red', 'orange'])
+    norm = colors.BoundaryNorm([0, 0.5, 1.5, 2.5, 3.5, 4.5, 6], cmap.N)
 
     display_maze = maze.copy()
     for x, y in explored:
@@ -56,17 +74,21 @@ def visualize_solution(maze, explored, path, start, end, title="Solución A*"):
     for x, y in path:
         if (x, y) not in [start, end]:
             display_maze[x, y] = 3  # Verde
-    display_maze[start] = 4  # Rojo
-    display_maze[end] = 5    # Verde oscuro
+    display_maze[start] = 4      # Rojo
+    display_maze[end] = 5        # Verde oscuro
 
     plt.figure(figsize=(10, 10))
     plt.imshow(display_maze, cmap=cmap, norm=norm)
     plt.title(title)
     plt.axis('off')
-    plt.show()
+
+    # Guardar imagen
+    save_path = os.path.join("Maze_results", filename)
+    plt.savefig(save_path, bbox_inches='tight')
+    plt.close()
 
     print(f"🔹 Longitud del camino: {len(path)}")
     print(f"🔹 Celdas exploradas: {len(explored)}")
-
+    print(f"📸 Imagen guardada como: {save_path}")
 
 
