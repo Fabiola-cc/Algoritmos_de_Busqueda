@@ -283,18 +283,5 @@ def create_summary_table():
         for algo in algoritmos:
             f.write(f"{algo:<10} {promedios[algo]['tiempo']:<15.6f} {promedios[algo]['nodos']:<15.1f} {promedios[algo]['longitud']:<15.1f}\n")
         
-        f.write("\nRANKING POR MÉTRICA (1 = mejor, 4 = peor):\n")
-        f.write(f"{'Algoritmo':<10} {'Tiempo':<10} {'Nodos':<10} {'Longitud':<10} {'Promedio':<10}\n")
-        f.write("-" * 50 + "\n")
-        
-        # Ordenar por ranking promedio
-        sorted_by_avg = sorted(algoritmos, key=lambda x: avg_rankings[x])
-        for algo in sorted_by_avg:
-            f.write(f"{algo:<10} {rankings['tiempo'][algo]:<10} {rankings['nodos'][algo]:<10} {rankings['longitud'][algo]:<10} {avg_rankings[algo]:<10.2f}\n")
-        
-        f.write("\nRANKING FINAL (de mejor a peor):\n")
-        for rank, algo in enumerate(sorted_by_avg, 1):
-            f.write(f"{rank}. {algo}\n")
-
 if __name__ == "__main__":
     main()

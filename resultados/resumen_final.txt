@@ -4,21 +4,7 @@ Basado en 25 laberintos de tama�o 45x55
 PROMEDIOS POR ALGORITMO:
 Algoritmo  Tiempo (s)      Nodos           Longitud       
 -------------------------------------------------------
-BFS        0.603760        2225.8          167.9          
-DFS        0.882881        2370.5          167.9          
-Dijkstra   0.609516        2229.4          167.9          
-A*         0.304373        1429.0          167.9          
-
-RANKING POR M�TRICA (1 = mejor, 4 = peor):
-Algoritmo  Tiempo     Nodos      Longitud   Promedio  
---------------------------------------------------
-BFS        2          2          1          1.67      
-A*         1          1          4          2.00      
-Dijkstra   3          3          3          3.00      
-DFS        4          4          2          3.33      
-
-RANKING FINAL (de mejor a peor):
-1. BFS
-2. A*
-3. Dijkstra
-4. DFS
+BFS        0.829983        2519.6          204.4          
+DFS        0.931114        2754.7          204.4          
+Dijkstra   0.840618        2519.4          204.4          
+A*         0.417231        1711.6          204.4          
