@@ -1,0 +1,134 @@
+ALGORITMO BFS(laberinto, entrada, salida):
+    // Inicialización
+    Crear cola FIFO e insertar entrada
+    Inicializar mapa de nodos visitados con {entrada: null}
+    Inicializar conjuntos: expandidos = {} y buscados = {entrada}
+    
+    MIENTRAS cola no esté vacía Y no se haya encontrado salida:
+        nodo_actual = Extraer primer elemento de la cola (FIFO)
+        
+        Marcar nodo_actual como expandido
+        
+        SI nodo_actual es la salida:
+            Encontrado = verdadero
+            Terminar búsqueda
+        
+        PARA CADA vecino adyacente de nodo_actual:
+            SI vecino no está en visitados:
+                Añadir vecino a la cola
+                Registrar vecino en visitados con padre = nodo_actual
+                Añadir vecino al conjunto de nodos buscados
+    
+    // Reconstrucción del camino
+    Reconstruir ruta desde salida hasta entrada usando el mapa de nodos visitados
+    
+    RETORNAR (estados_búsqueda, camino)
+
+
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+
+
+ALGORITMO DFS(laberinto, entrada, salida):
+    // Inicialización
+    Crear pila e insertar entrada
+    Inicializar mapa de nodos visitados con {entrada: null}
+    Inicializar conjuntos: expandidos = {} y buscados = {entrada}
+    
+    MIENTRAS pila no esté vacía Y no se haya encontrado salida:
+        nodo_actual = Extraer último elemento de la pila (LIFO)
+        
+        SI nodo_actual ya está expandido:
+            Continuar con la siguiente iteración
+            
+        Marcar nodo_actual como expandido
+        
+        SI nodo_actual es la salida:
+            Encontrado = verdadero
+            Terminar búsqueda
+        
+        PARA CADA vecino adyacente de nodo_actual (en orden INVERSO):
+            SI vecino no está en visitados:
+                Añadir vecino a la pila
+                Registrar vecino en visitados con padre = nodo_actual
+                Añadir vecino al conjunto de nodos buscados
+    
+    // Reconstrucción del camino
+    Reconstruir ruta desde salida hasta entrada usando el mapa de nodos visitados
+    
+    RETORNAR (estados_búsqueda, camino)
+
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+
+ALGORITMO Dijkstra(laberinto, entrada, salida):
+    // Inicialización
+    Crear cola de prioridad e insertar (0, entrada) // (distancia, nodo)
+    Inicializar mapa de distancias con {entrada: 0}
+    Inicializar mapa de nodos visitados (vacío)
+    Inicializar conjuntos: expandidos = {} y buscados = {entrada}
+    
+    MIENTRAS cola_prioridad no esté vacía Y no se haya encontrado salida:
+        (dist, nodo_actual) = Extraer elemento con menor distancia de la cola
+        
+        SI nodo_actual ya está expandido:
+            Continuar con la siguiente iteración
+            
+        Marcar nodo_actual como expandido
+        
+        SI nodo_actual es la salida:
+            Encontrado = verdadero
+            Terminar búsqueda
+        
+        PARA CADA vecino adyacente de nodo_actual:
+            nueva_dist = dist + 1 // En laberintos el costo es uniforme
+            
+            SI vecino no tiene distancia registrada O nueva_dist < distancia_actual:
+                Actualizar distancia[vecino] = nueva_dist
+                Registrar vecino en visitados con padre = nodo_actual
+                Insertar (nueva_dist, vecino) en la cola de prioridad
+                Añadir vecino al conjunto de nodos buscados
+    
+    // Reconstrucción del camino
+    Reconstruir ruta desde salida hasta entrada usando el mapa de nodos visitados
+    
+    RETORNAR (estados_búsqueda, camino)
+
+    
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+
+ALGORITMO A_Star(laberinto, entrada, salida):
+    // Inicialización
+    Definir h(nodo) = distancia_manhattan(nodo, salida) // Función heurística
+    Crear cola de prioridad e insertar (h(entrada), 0, entrada) // (f_score, g_score, nodo)
+    Inicializar mapa de g_scores con {entrada: 0}
+    Inicializar mapa de nodos visitados (vacío)
+    Inicializar conjuntos: expandidos = {} y buscados = {entrada}
+    
+    MIENTRAS cola_prioridad no esté vacía Y no se haya encontrado salida:
+        (_, g_score, nodo_actual) = Extraer elemento con menor f_score de la cola
+        
+        SI nodo_actual ya está expandido:
+            Continuar con la siguiente iteración
+            
+        Marcar nodo_actual como expandido
+        
+        SI nodo_actual es la salida:
+            Encontrado = verdadero
+            Terminar búsqueda
+        
+        PARA CADA vecino adyacente de nodo_actual:
+            nuevo_g = g_score + 1 // En laberintos el costo es uniforme
+            
+            SI vecino no tiene g_score registrado O nuevo_g < g_score_actual:
+                Actualizar g_scores[vecino] = nuevo_g
+                f_score = nuevo_g + h(vecino)
+                Registrar vecino en visitados con padre = nodo_actual
+                Insertar (f_score, nuevo_g, vecino) en la cola de prioridad
+                Añadir vecino al conjunto de nodos buscados
+    
+    // Reconstrucción del camino
+    Reconstruir ruta desde salida hasta entrada usando el mapa de nodos visitados
+    
+    RETORNAR (estados_búsqueda, camino)
