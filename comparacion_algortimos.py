@@ -31,6 +31,10 @@ def logical_to_maze_coords(logical_coord):
     """Convierte coordenadas lógicas a coordenadas del laberinto."""
     return (2 * logical_coord[0] + 1, 2 * logical_coord[1] + 1)
 
+def maze_to_logical_coords(maze_coord):
+    """Convierte coordenadas del laberinto a coordenadas lógicas."""
+    return ((maze_coord[0] - 1) // 2, (maze_coord[1] - 1) // 2)
+
 def generate_distant_points(maze, min_distance=10):
     """
     Genera dos puntos A y B en el laberinto con una distancia Manhattan mínima.
@@ -40,7 +44,7 @@ def generate_distant_points(maze, min_distance=10):
         min_distance: Distancia Manhattan mínima requerida
         
     Returns:
-        Tupla (punto_A, punto_B) donde cada punto es (fila, columna)
+        Tupla ((punto_A_matriz, punto_A_logico), (punto_B_matriz, punto_B_logico))
     """
     height, width = maze.shape
     logical_height = (height - 1) // 2
@@ -54,18 +58,22 @@ def generate_distant_points(maze, min_distance=10):
         logical_b = (random.randint(0, logical_height-1), random.randint(0, logical_width-1))
         
         # Convertir a coordenadas del laberinto
-        point_a = logical_to_maze_coords(logical_a)
-        point_b = logical_to_maze_coords(logical_b)
+        point_a_matrix = logical_to_maze_coords(logical_a)
+        point_b_matrix = logical_to_maze_coords(logical_b)
         
         # Verificar distancia Manhattan y que ambos puntos sean pasillos (valor 0)
         distance = manhattan_distance(logical_a, logical_b)
-        if distance >= min_distance and maze[point_a] == 0 and maze[point_b] == 0:
-            return point_a, point_b
+        if distance >= min_distance and maze[point_a_matrix] == 0 and maze[point_b_matrix] == 0:
+            return (point_a_matrix, logical_a), (point_b_matrix, logical_b)
     
     # Si no se encuentran puntos con la distancia requerida, usar extremos del laberinto
-    point_a = (1, 1)  # Esquina superior izquierda
-    point_b = (height-2, width-2)  # Esquina inferior derecha
-    return point_a, point_b
+    point_a_matrix = (1, 1)  # Esquina superior izquierda
+    point_b_matrix = (height-2, width-2)  # Esquina inferior derecha
+    
+    logical_a = maze_to_logical_coords(point_a_matrix)
+    logical_b = maze_to_logical_coords(point_b_matrix)
+    
+    return (point_a_matrix, logical_a), (point_b_matrix, logical_b)
 
 def run_algorithm(algorithm_class, maze, start, end):
     """
@@ -108,8 +116,8 @@ def compare_algorithms_on_maze(maze, start, end):
     
     Args:
         maze: Matriz del laberinto
-        start: Punto de inicio
-        end: Punto final
+        start: Punto de inicio (fila, columna)
+        end: Punto final (fila, columna)
         
     Returns:
         Diccionario con resultados por algoritmo
@@ -157,6 +165,10 @@ def main():
         # Preparar archivo TXT consolidado para resultados detallados
         with open(os.path.join("resultados", "todos_laberintos_resultados.txt"), 'w') as txt_file:
             txt_file.write("=== RESULTADOS DETALLADOS POR LABERINTO ===\n\n")
+            txt_file.write("NOTA: El laberinto de dimensiones lógicas 45x55 se representa en una matriz\n")
+            txt_file.write("de tamaño 91x111 para incluir las paredes. Las coordenadas de matriz corresponden\n")
+            txt_file.write("a posiciones en esta matriz, mientras que las coordenadas lógicas son las\n")
+            txt_file.write("posiciones en el laberinto sin paredes (0-44 para filas, 0-54 para columnas).\n\n")
             
             # Generar y procesar cada laberinto
             for i in range(num_laberintos):
@@ -166,18 +178,17 @@ def main():
                 generator = MazeGenerator(altura, ancho)
                 maze, _ = generator.generate_kruskal()
                 
-                # Generar puntos A y B
-                start, end = generate_distant_points(maze, min_distance)
+                # Generar puntos A y B (con coordenadas de matriz y lógicas)
+                (start_matrix, start_logical), (end_matrix, end_logical) = generate_distant_points(maze, min_distance)
                 
-                # Calcular distancia Manhattan para versión lógica (coordenadas en la cuadrícula)
-                logical_start = ((start[0] - 1) // 2, (start[1] - 1) // 2)
-                logical_end = ((end[0] - 1) // 2, (end[1] - 1) // 2)
-                logical_distance = manhattan_distance(logical_start, logical_end)
+                # Calcular distancia Manhattan en coordenadas lógicas
+                logical_distance = manhattan_distance(start_logical, end_logical)
                 
-                print(f"Puntos A={start}, B={end}, Distancia Manhattan lógica: {logical_distance}")
+                print(f"Puntos A={start_matrix} (lógico {start_logical}), B={end_matrix} (lógico {end_logical})")
+                print(f"Distancia Manhattan lógica: {logical_distance}")
                 
-                # Comparar algoritmos
-                results = compare_algorithms_on_maze(maze, start, end)
+                # Comparar algoritmos (usamos coordenadas de matriz para los algoritmos)
+                results = compare_algorithms_on_maze(maze, start_matrix, end_matrix)
                 
                 # Guardar resultados en CSV
                 for algo_name, stats in results.items():
@@ -192,8 +203,10 @@ def main():
                 # Añadir resultados de este laberinto al archivo de texto consolidado
                 txt_file.write(f"{'='*50}\n")
                 txt_file.write(f"=== Laberinto {i+1} ===\n")
-                txt_file.write(f"Dimensiones: {altura}x{ancho}\n")
-                txt_file.write(f"Puntos: A={start}, B={end}\n")
+                txt_file.write(f"Dimensiones lógicas: {altura}x{ancho}\n")
+                txt_file.write(f"Dimensiones de matriz: {2*altura+1}x{2*ancho+1}\n")
+                txt_file.write(f"Punto A: {start_matrix} (coordenada lógica {start_logical})\n")
+                txt_file.write(f"Punto B: {end_matrix} (coordenada lógica {end_logical})\n")
                 txt_file.write(f"Distancia Manhattan lógica: {logical_distance}\n\n")
                 
                 txt_file.write("Resultados por algoritmo:\n")

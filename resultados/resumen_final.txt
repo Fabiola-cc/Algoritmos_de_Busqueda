@@ -1,24 +1,24 @@
-=== RESUMEN DE COMPARACIÓN DE ALGORITMOS ===
-Basado en 25 laberintos de tamaño 45x55
+=== RESUMEN DE COMPARACIï¿½N DE ALGORITMOS ===
+Basado en 25 laberintos de tamaï¿½o 45x55
 
 PROMEDIOS POR ALGORITMO:
 Algoritmo  Tiempo (s)      Nodos           Longitud       
 -------------------------------------------------------
-BFS        0.949607        2857.4          199.5          
-DFS        0.634993        2407.4          199.5          
-Dijkstra   0.944361        2859.5          199.5          
-A*         0.507113        1946.1          199.5          
+BFS        0.603760        2225.8          167.9          
+DFS        0.882881        2370.5          167.9          
+Dijkstra   0.609516        2229.4          167.9          
+A*         0.304373        1429.0          167.9          
 
-RANKING POR MÉTRICA (1 = mejor, 4 = peor):
+RANKING POR Mï¿½TRICA (1 = mejor, 4 = peor):
 Algoritmo  Tiempo     Nodos      Longitud   Promedio  
 --------------------------------------------------
-DFS        2          2          2          2.00      
+BFS        2          2          1          1.67      
 A*         1          1          4          2.00      
-BFS        4          3          1          2.67      
-Dijkstra   3          4          3          3.33      
+Dijkstra   3          3          3          3.00      
+DFS        4          4          2          3.33      
 
 RANKING FINAL (de mejor a peor):
-1. DFS
+1. BFS
 2. A*
-3. BFS
-4. Dijkstra
+3. Dijkstra
+4. DFS
