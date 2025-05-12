@@ -9,749 +9,749 @@ posiciones en el laberinto sin paredes (0-44 para filas, 0-54 para columnas).
 === Laberinto 1 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (9, 35) (coordenada lógica (4, 17))
-Punto B: (33, 107) (coordenada lógica (16, 53))
-Distancia Manhattan lógica: 48
+Punto A: (5, 9) (coordenada lógica (2, 4))
+Punto B: (89, 31) (coordenada lógica (44, 15))
+Distancia Manhattan lógica: 53
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.610318 segundos
-  Nodos explorados: 2745
-  Longitud de ruta: 209
+  Tiempo de ejecución: 0.841804 segundos
+  Nodos explorados: 3232
+  Longitud de ruta: 239
 
 DFS:
-  Tiempo de ejecución: 1.055009 segundos
-  Nodos explorados: 3511
-  Longitud de ruta: 209
+  Tiempo de ejecución: 1.223616 segundos
+  Nodos explorados: 3345
+  Longitud de ruta: 239
 
 Dijkstra:
-  Tiempo de ejecución: 0.645390 segundos
-  Nodos explorados: 2734
-  Longitud de ruta: 209
+  Tiempo de ejecución: 1.106692 segundos
+  Nodos explorados: 3243
+  Longitud de ruta: 239
 
 A*:
-  Tiempo de ejecución: 0.385688 segundos
-  Nodos explorados: 2107
-  Longitud de ruta: 209
+  Tiempo de ejecución: 0.295385 segundos
+  Nodos explorados: 1829
+  Longitud de ruta: 239
 
 
 ==================================================
 === Laberinto 2 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (3, 49) (coordenada lógica (1, 24))
-Punto B: (67, 81) (coordenada lógica (33, 40))
-Distancia Manhattan lógica: 48
+Punto A: (39, 99) (coordenada lógica (19, 49))
+Punto B: (73, 57) (coordenada lógica (36, 28))
+Distancia Manhattan lógica: 38
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 1.630635 segundos
-  Nodos explorados: 4123
-  Longitud de ruta: 213
+  Tiempo de ejecución: 1.542569 segundos
+  Nodos explorados: 4249
+  Longitud de ruta: 217
 
 DFS:
-  Tiempo de ejecución: 0.258371 segundos
-  Nodos explorados: 1923
-  Longitud de ruta: 213
+  Tiempo de ejecución: 0.284504 segundos
+  Nodos explorados: 1873
+  Longitud de ruta: 217
 
 Dijkstra:
-  Tiempo de ejecución: 1.669998 segundos
-  Nodos explorados: 4126
-  Longitud de ruta: 213
+  Tiempo de ejecución: 1.645801 segundos
+  Nodos explorados: 4259
+  Longitud de ruta: 217
 
 A*:
-  Tiempo de ejecución: 0.607022 segundos
-  Nodos explorados: 2721
-  Longitud de ruta: 213
+  Tiempo de ejecución: 1.017184 segundos
+  Nodos explorados: 3283
+  Longitud de ruta: 217
 
 
 ==================================================
 === Laberinto 3 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (59, 67) (coordenada lógica (29, 33))
-Punto B: (75, 103) (coordenada lógica (37, 51))
-Distancia Manhattan lógica: 26
+Punto A: (35, 35) (coordenada lógica (17, 17))
+Punto B: (43, 101) (coordenada lógica (21, 50))
+Distancia Manhattan lógica: 37
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.918096 segundos
-  Nodos explorados: 3365
-  Longitud de ruta: 197
+  Tiempo de ejecución: 2.117806 segundos
+  Nodos explorados: 4494
+  Longitud de ruta: 243
 
 DFS:
-  Tiempo de ejecución: 0.103269 segundos
-  Nodos explorados: 1169
-  Longitud de ruta: 197
+  Tiempo de ejecución: 1.183012 segundos
+  Nodos explorados: 3491
+  Longitud de ruta: 243
 
 Dijkstra:
-  Tiempo de ejecución: 0.903762 segundos
-  Nodos explorados: 3377
-  Longitud de ruta: 197
+  Tiempo de ejecución: 1.660013 segundos
+  Nodos explorados: 4499
+  Longitud de ruta: 243
 
 A*:
-  Tiempo de ejecución: 0.357934 segundos
-  Nodos explorados: 2141
-  Longitud de ruta: 197
+  Tiempo de ejecución: 0.856578 segundos
+  Nodos explorados: 3181
+  Longitud de ruta: 243
 
 
 ==================================================
 === Laberinto 4 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (49, 25) (coordenada lógica (24, 12))
-Punto B: (55, 57) (coordenada lógica (27, 28))
-Distancia Manhattan lógica: 19
+Punto A: (59, 65) (coordenada lógica (29, 32))
+Punto B: (27, 11) (coordenada lógica (13, 5))
+Distancia Manhattan lógica: 43
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.032600 segundos
-  Nodos explorados: 759
-  Longitud de ruta: 79
+  Tiempo de ejecución: 0.649299 segundos
+  Nodos explorados: 2908
+  Longitud de ruta: 155
 
 DFS:
-  Tiempo de ejecución: 0.856779 segundos
-  Nodos explorados: 3365
-  Longitud de ruta: 79
+  Tiempo de ejecución: 0.973604 segundos
+  Nodos explorados: 3679
+  Longitud de ruta: 155
 
 Dijkstra:
-  Tiempo de ejecución: 0.043539 segundos
-  Nodos explorados: 759
-  Longitud de ruta: 79
+  Tiempo de ejecución: 0.750929 segundos
+  Nodos explorados: 2914
+  Longitud de ruta: 155
 
 A*:
-  Tiempo de ejecución: 0.005014 segundos
-  Nodos explorados: 285
-  Longitud de ruta: 79
+  Tiempo de ejecución: 0.067917 segundos
+  Nodos explorados: 993
+  Longitud de ruta: 155
 
 
 ==================================================
 === Laberinto 5 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (67, 63) (coordenada lógica (33, 31))
-Punto B: (19, 23) (coordenada lógica (9, 11))
-Distancia Manhattan lógica: 44
+Punto A: (81, 103) (coordenada lógica (40, 51))
+Punto B: (31, 9) (coordenada lógica (15, 4))
+Distancia Manhattan lógica: 72
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.778594 segundos
-  Nodos explorados: 3107
-  Longitud de ruta: 313
+  Tiempo de ejecución: 2.104416 segundos
+  Nodos explorados: 4729
+  Longitud de ruta: 361
 
 DFS:
-  Tiempo de ejecución: 1.475399 segundos
-  Nodos explorados: 3599
-  Longitud de ruta: 313
+  Tiempo de ejecución: 0.314285 segundos
+  Nodos explorados: 2011
+  Longitud de ruta: 361
 
 Dijkstra:
-  Tiempo de ejecución: 0.851513 segundos
-  Nodos explorados: 3107
-  Longitud de ruta: 313
+  Tiempo de ejecución: 2.358783 segundos
+  Nodos explorados: 4734
+  Longitud de ruta: 361
 
 A*:
-  Tiempo de ejecución: 0.704934 segundos
-  Nodos explorados: 2741
-  Longitud de ruta: 313
+  Tiempo de ejecución: 1.621431 segundos
+  Nodos explorados: 4221
+  Longitud de ruta: 361
 
 
 ==================================================
 === Laberinto 6 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (19, 101) (coordenada lógica (9, 50))
-Punto B: (57, 37) (coordenada lógica (28, 18))
-Distancia Manhattan lógica: 51
+Punto A: (77, 95) (coordenada lógica (38, 47))
+Punto B: (11, 45) (coordenada lógica (5, 22))
+Distancia Manhattan lógica: 58
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.584440 segundos
-  Nodos explorados: 2612
-  Longitud de ruta: 263
+  Tiempo de ejecución: 1.637950 segundos
+  Nodos explorados: 4341
+  Longitud de ruta: 357
 
 DFS:
-  Tiempo de ejecución: 0.170396 segundos
-  Nodos explorados: 1629
-  Longitud de ruta: 263
+  Tiempo de ejecución: 0.706031 segundos
+  Nodos explorados: 2845
+  Longitud de ruta: 357
 
 Dijkstra:
-  Tiempo de ejecución: 0.617199 segundos
-  Nodos explorados: 2610
-  Longitud de ruta: 263
+  Tiempo de ejecución: 1.499973 segundos
+  Nodos explorados: 4339
+  Longitud de ruta: 357
 
 A*:
-  Tiempo de ejecución: 0.335645 segundos
-  Nodos explorados: 2149
-  Longitud de ruta: 263
+  Tiempo de ejecución: 1.383359 segundos
+  Nodos explorados: 4067
+  Longitud de ruta: 357
 
 
 ==================================================
 === Laberinto 7 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (79, 17) (coordenada lógica (39, 8))
-Punto B: (1, 45) (coordenada lógica (0, 22))
-Distancia Manhattan lógica: 53
+Punto A: (85, 25) (coordenada lógica (42, 12))
+Punto B: (21, 39) (coordenada lógica (10, 19))
+Distancia Manhattan lógica: 39
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.322493 segundos
-  Nodos explorados: 2154
-  Longitud de ruta: 187
+  Tiempo de ejecución: 0.303241 segundos
+  Nodos explorados: 2279
+  Longitud de ruta: 171
 
 DFS:
-  Tiempo de ejecución: 1.894480 segundos
-  Nodos explorados: 4421
-  Longitud de ruta: 187
+  Tiempo de ejecución: 0.242808 segundos
+  Nodos explorados: 1847
+  Longitud de ruta: 171
 
 Dijkstra:
-  Tiempo de ejecución: 0.465762 segundos
-  Nodos explorados: 2144
-  Longitud de ruta: 187
+  Tiempo de ejecución: 0.286789 segundos
+  Nodos explorados: 2273
+  Longitud de ruta: 171
 
 A*:
-  Tiempo de ejecución: 0.178703 segundos
-  Nodos explorados: 1381
-  Longitud de ruta: 187
+  Tiempo de ejecución: 0.129152 segundos
+  Nodos explorados: 1333
+  Longitud de ruta: 171
 
 
 ==================================================
 === Laberinto 8 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (77, 103) (coordenada lógica (38, 51))
-Punto B: (81, 41) (coordenada lógica (40, 20))
-Distancia Manhattan lógica: 33
+Punto A: (85, 31) (coordenada lógica (42, 15))
+Punto B: (31, 107) (coordenada lógica (15, 53))
+Distancia Manhattan lógica: 65
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 2.985061 segundos
-  Nodos explorados: 4748
-  Longitud de ruta: 479
+  Tiempo de ejecución: 0.936692 segundos
+  Nodos explorados: 3565
+  Longitud de ruta: 279
 
 DFS:
-  Tiempo de ejecución: 2.211313 segundos
-  Nodos explorados: 4049
-  Longitud de ruta: 479
+  Tiempo de ejecución: 0.161815 segundos
+  Nodos explorados: 1695
+  Longitud de ruta: 279
 
 Dijkstra:
-  Tiempo de ejecución: 2.494379 segundos
-  Nodos explorados: 4745
-  Longitud de ruta: 479
+  Tiempo de ejecución: 1.175941 segundos
+  Nodos explorados: 3571
+  Longitud de ruta: 279
 
 A*:
-  Tiempo de ejecución: 1.722266 segundos
-  Nodos explorados: 4163
-  Longitud de ruta: 479
+  Tiempo de ejecución: 0.642201 segundos
+  Nodos explorados: 2859
+  Longitud de ruta: 279
 
 
 ==================================================
 === Laberinto 9 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (37, 5) (coordenada lógica (18, 2))
-Punto B: (11, 75) (coordenada lógica (5, 37))
-Distancia Manhattan lógica: 48
+Punto A: (73, 51) (coordenada lógica (36, 25))
+Punto B: (55, 29) (coordenada lógica (27, 14))
+Distancia Manhattan lógica: 20
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 2.079359 segundos
-  Nodos explorados: 4539
-  Longitud de ruta: 417
+  Tiempo de ejecución: 0.825627 segundos
+  Nodos explorados: 3354
+  Longitud de ruta: 165
 
 DFS:
-  Tiempo de ejecución: 0.192403 segundos
-  Nodos explorados: 1327
-  Longitud de ruta: 417
+  Tiempo de ejecución: 1.023188 segundos
+  Nodos explorados: 3505
+  Longitud de ruta: 165
 
 Dijkstra:
-  Tiempo de ejecución: 2.903888 segundos
-  Nodos explorados: 4531
-  Longitud de ruta: 417
+  Tiempo de ejecución: 0.819796 segundos
+  Nodos explorados: 3363
+  Longitud de ruta: 165
 
 A*:
-  Tiempo de ejecución: 1.954691 segundos
-  Nodos explorados: 4349
-  Longitud de ruta: 417
+  Tiempo de ejecución: 0.180395 segundos
+  Nodos explorados: 1859
+  Longitud de ruta: 165
 
 
 ==================================================
 === Laberinto 10 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (35, 19) (coordenada lógica (17, 9))
-Punto B: (75, 51) (coordenada lógica (37, 25))
-Distancia Manhattan lógica: 36
+Punto A: (43, 77) (coordenada lógica (21, 38))
+Punto B: (19, 25) (coordenada lógica (9, 12))
+Distancia Manhattan lógica: 38
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.391602 segundos
-  Nodos explorados: 2188
-  Longitud de ruta: 209
+  Tiempo de ejecución: 1.421159 segundos
+  Nodos explorados: 4109
+  Longitud de ruta: 457
 
 DFS:
-  Tiempo de ejecución: 0.166571 segundos
-  Nodos explorados: 1677
-  Longitud de ruta: 209
+  Tiempo de ejecución: 1.317844 segundos
+  Nodos explorados: 3617
+  Longitud de ruta: 457
 
 Dijkstra:
-  Tiempo de ejecución: 0.320406 segundos
-  Nodos explorados: 2207
-  Longitud de ruta: 209
+  Tiempo de ejecución: 1.536181 segundos
+  Nodos explorados: 4099
+  Longitud de ruta: 457
 
 A*:
-  Tiempo de ejecución: 0.085666 segundos
-  Nodos explorados: 1215
-  Longitud de ruta: 209
+  Tiempo de ejecución: 1.721333 segundos
+  Nodos explorados: 3729
+  Longitud de ruta: 457
 
 
 ==================================================
 === Laberinto 11 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (33, 47) (coordenada lógica (16, 23))
-Punto B: (3, 49) (coordenada lógica (1, 24))
-Distancia Manhattan lógica: 16
+Punto A: (33, 53) (coordenada lógica (16, 26))
+Punto B: (7, 79) (coordenada lógica (3, 39))
+Distancia Manhattan lógica: 26
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.009472 segundos
-  Nodos explorados: 367
-  Longitud de ruta: 49
+  Tiempo de ejecución: 1.979109 segundos
+  Nodos explorados: 4349
+  Longitud de ruta: 477
 
 DFS:
-  Tiempo de ejecución: 1.499321 segundos
-  Nodos explorados: 4169
-  Longitud de ruta: 49
+  Tiempo de ejecución: 0.360749 segundos
+  Nodos explorados: 1971
+  Longitud de ruta: 477
 
 Dijkstra:
-  Tiempo de ejecución: 0.007117 segundos
-  Nodos explorados: 360
-  Longitud de ruta: 49
+  Tiempo de ejecución: 1.824554 segundos
+  Nodos explorados: 4349
+  Longitud de ruta: 477
 
 A*:
-  Tiempo de ejecución: 0.001945 segundos
-  Nodos explorados: 147
-  Longitud de ruta: 49
+  Tiempo de ejecución: 1.761380 segundos
+  Nodos explorados: 4217
+  Longitud de ruta: 477
 
 
 ==================================================
 === Laberinto 12 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (39, 31) (coordenada lógica (19, 15))
-Punto B: (29, 81) (coordenada lógica (14, 40))
-Distancia Manhattan lógica: 30
+Punto A: (25, 77) (coordenada lógica (12, 38))
+Punto B: (55, 53) (coordenada lógica (27, 26))
+Distancia Manhattan lógica: 27
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.474310 segundos
-  Nodos explorados: 2456
-  Longitud de ruta: 105
+  Tiempo de ejecución: 0.619318 segundos
+  Nodos explorados: 2819
+  Longitud de ruta: 143
 
 DFS:
-  Tiempo de ejecución: 0.034768 segundos
-  Nodos explorados: 377
-  Longitud de ruta: 105
+  Tiempo de ejecución: 1.628169 segundos
+  Nodos explorados: 4321
+  Longitud de ruta: 143
 
 Dijkstra:
-  Tiempo de ejecución: 0.491750 segundos
-  Nodos explorados: 2466
-  Longitud de ruta: 105
+  Tiempo de ejecución: 0.715927 segundos
+  Nodos explorados: 2793
+  Longitud de ruta: 143
 
 A*:
-  Tiempo de ejecución: 0.044865 segundos
-  Nodos explorados: 729
-  Longitud de ruta: 105
+  Tiempo de ejecución: 0.114881 segundos
+  Nodos explorados: 1391
+  Longitud de ruta: 143
 
 
 ==================================================
 === Laberinto 13 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (11, 21) (coordenada lógica (5, 10))
-Punto B: (75, 17) (coordenada lógica (37, 8))
-Distancia Manhattan lógica: 34
+Punto A: (33, 45) (coordenada lógica (16, 22))
+Punto B: (53, 41) (coordenada lógica (26, 20))
+Distancia Manhattan lógica: 12
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 1.088120 segundos
-  Nodos explorados: 3000
-  Longitud de ruta: 201
+  Tiempo de ejecución: 0.009984 segundos
+  Nodos explorados: 396
+  Longitud de ruta: 69
 
 DFS:
-  Tiempo de ejecución: 2.494489 segundos
-  Nodos explorados: 3869
-  Longitud de ruta: 201
+  Tiempo de ejecución: 0.106488 segundos
+  Nodos explorados: 1399
+  Longitud de ruta: 69
 
 Dijkstra:
-  Tiempo de ejecución: 0.906218 segundos
-  Nodos explorados: 2994
-  Longitud de ruta: 201
+  Tiempo de ejecución: 0.007004 segundos
+  Nodos explorados: 400
+  Longitud de ruta: 69
 
 A*:
-  Tiempo de ejecución: 0.345427 segundos
-  Nodos explorados: 1909
-  Longitud de ruta: 201
+  Tiempo de ejecución: 0.001920 segundos
+  Nodos explorados: 195
+  Longitud de ruta: 69
 
 
 ==================================================
 === Laberinto 14 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (65, 23) (coordenada lógica (32, 11))
-Punto B: (37, 35) (coordenada lógica (18, 17))
-Distancia Manhattan lógica: 20
+Punto A: (5, 5) (coordenada lógica (2, 2))
+Punto B: (47, 73) (coordenada lógica (23, 36))
+Distancia Manhattan lógica: 55
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.101851 segundos
-  Nodos explorados: 1138
-  Longitud de ruta: 149
+  Tiempo de ejecución: 0.394483 segundos
+  Nodos explorados: 2611
+  Longitud de ruta: 271
 
 DFS:
-  Tiempo de ejecución: 1.079837 segundos
-  Nodos explorados: 3561
-  Longitud de ruta: 149
+  Tiempo de ejecución: 0.680560 segundos
+  Nodos explorados: 2451
+  Longitud de ruta: 271
 
 Dijkstra:
-  Tiempo de ejecución: 0.076297 segundos
-  Nodos explorados: 1134
-  Longitud de ruta: 149
+  Tiempo de ejecución: 0.547906 segundos
+  Nodos explorados: 2607
+  Longitud de ruta: 271
 
 A*:
-  Tiempo de ejecución: 0.040990 segundos
-  Nodos explorados: 759
-  Longitud de ruta: 149
+  Tiempo de ejecución: 0.154373 segundos
+  Nodos explorados: 1777
+  Longitud de ruta: 271
 
 
 ==================================================
 === Laberinto 15 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (83, 33) (coordenada lógica (41, 16))
-Punto B: (43, 29) (coordenada lógica (21, 14))
-Distancia Manhattan lógica: 22
+Punto A: (75, 25) (coordenada lógica (37, 12))
+Punto B: (17, 95) (coordenada lógica (8, 47))
+Distancia Manhattan lógica: 64
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.031434 segundos
-  Nodos explorados: 623
-  Longitud de ruta: 73
+  Tiempo de ejecución: 1.544187 segundos
+  Nodos explorados: 4228
+  Longitud de ruta: 261
 
 DFS:
-  Tiempo de ejecución: 2.044652 segundos
-  Nodos explorados: 4575
-  Longitud de ruta: 73
+  Tiempo de ejecución: 0.282332 segundos
+  Nodos explorados: 1885
+  Longitud de ruta: 261
 
 Dijkstra:
-  Tiempo de ejecución: 0.032570 segundos
-  Nodos explorados: 615
-  Longitud de ruta: 73
+  Tiempo de ejecución: 1.681930 segundos
+  Nodos explorados: 4235
+  Longitud de ruta: 261
 
 A*:
-  Tiempo de ejecución: 0.006611 segundos
-  Nodos explorados: 241
-  Longitud de ruta: 73
+  Tiempo de ejecución: 0.913049 segundos
+  Nodos explorados: 3017
+  Longitud de ruta: 261
 
 
 ==================================================
 === Laberinto 16 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (73, 13) (coordenada lógica (36, 6))
-Punto B: (17, 77) (coordenada lógica (8, 38))
-Distancia Manhattan lógica: 60
+Punto A: (83, 11) (coordenada lógica (41, 5))
+Punto B: (33, 67) (coordenada lógica (16, 33))
+Distancia Manhattan lógica: 53
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 2.719653 segundos
-  Nodos explorados: 4725
-  Longitud de ruta: 417
+  Tiempo de ejecución: 0.250042 segundos
+  Nodos explorados: 2226
+  Longitud de ruta: 243
 
 DFS:
-  Tiempo de ejecución: 0.789416 segundos
-  Nodos explorados: 2585
-  Longitud de ruta: 417
+  Tiempo de ejecución: 1.046666 segundos
+  Nodos explorados: 3661
+  Longitud de ruta: 243
 
 Dijkstra:
-  Tiempo de ejecución: 2.288244 segundos
-  Nodos explorados: 4726
-  Longitud de ruta: 417
+  Tiempo de ejecución: 0.368059 segundos
+  Nodos explorados: 2217
+  Longitud de ruta: 243
 
 A*:
-  Tiempo de ejecución: 1.784846 segundos
-  Nodos explorados: 4347
-  Longitud de ruta: 417
+  Tiempo de ejecución: 0.174001 segundos
+  Nodos explorados: 1711
+  Longitud de ruta: 243
 
 
 ==================================================
 === Laberinto 17 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (37, 21) (coordenada lógica (18, 10))
-Punto B: (13, 81) (coordenada lógica (6, 40))
-Distancia Manhattan lógica: 42
+Punto A: (87, 89) (coordenada lógica (43, 44))
+Punto B: (59, 101) (coordenada lógica (29, 50))
+Distancia Manhattan lógica: 20
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.510421 segundos
-  Nodos explorados: 2282
-  Longitud de ruta: 157
+  Tiempo de ejecución: 0.019999 segundos
+  Nodos explorados: 546
+  Longitud de ruta: 57
 
 DFS:
-  Tiempo de ejecución: 1.525569 segundos
-  Nodos explorados: 3961
-  Longitud de ruta: 157
+  Tiempo de ejecución: 0.004001 segundos
+  Nodos explorados: 265
+  Longitud de ruta: 57
 
 Dijkstra:
-  Tiempo de ejecución: 0.492775 segundos
-  Nodos explorados: 2271
-  Longitud de ruta: 157
+  Tiempo de ejecución: 0.018010 segundos
+  Nodos explorados: 542
+  Longitud de ruta: 57
 
 A*:
-  Tiempo de ejecución: 0.127872 segundos
-  Nodos explorados: 1497
-  Longitud de ruta: 157
+  Tiempo de ejecución: 0.003020 segundos
+  Nodos explorados: 205
+  Longitud de ruta: 57
 
 
 ==================================================
 === Laberinto 18 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (9, 53) (coordenada lógica (4, 26))
-Punto B: (13, 11) (coordenada lógica (6, 5))
-Distancia Manhattan lógica: 23
+Punto A: (87, 53) (coordenada lógica (43, 26))
+Punto B: (75, 97) (coordenada lógica (37, 48))
+Distancia Manhattan lógica: 28
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.004228 segundos
-  Nodos explorados: 232
-  Longitud de ruta: 75
+  Tiempo de ejecución: 0.020073 segundos
+  Nodos explorados: 583
+  Longitud de ruta: 97
 
 DFS:
-  Tiempo de ejecución: 2.055715 segundos
-  Nodos explorados: 4707
-  Longitud de ruta: 75
+  Tiempo de ejecución: 1.978904 segundos
+  Nodos explorados: 4815
+  Longitud de ruta: 97
 
 Dijkstra:
-  Tiempo de ejecución: 0.007077 segundos
-  Nodos explorados: 228
-  Longitud de ruta: 75
+  Tiempo de ejecución: 0.017909 segundos
+  Nodos explorados: 581
+  Longitud de ruta: 97
 
 A*:
-  Tiempo de ejecución: 0.004320 segundos
-  Nodos explorados: 153
-  Longitud de ruta: 75
+  Tiempo de ejecución: 0.007000 segundos
+  Nodos explorados: 359
+  Longitud de ruta: 97
 
 
 ==================================================
 === Laberinto 19 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (87, 71) (coordenada lógica (43, 35))
-Punto B: (75, 19) (coordenada lógica (37, 9))
-Distancia Manhattan lógica: 32
+Punto A: (81, 101) (coordenada lógica (40, 50))
+Punto B: (55, 107) (coordenada lógica (27, 53))
+Distancia Manhattan lógica: 16
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.322267 segundos
-  Nodos explorados: 2267
-  Longitud de ruta: 149
+  Tiempo de ejecución: 0.011085 segundos
+  Nodos explorados: 418
+  Longitud de ruta: 61
 
 DFS:
-  Tiempo de ejecución: 0.047101 segundos
-  Nodos explorados: 637
-  Longitud de ruta: 149
+  Tiempo de ejecución: 0.002914 segundos
+  Nodos explorados: 193
+  Longitud de ruta: 61
 
 Dijkstra:
-  Tiempo de ejecución: 0.448880 segundos
-  Nodos explorados: 2287
-  Longitud de ruta: 149
+  Tiempo de ejecución: 0.010023 segundos
+  Nodos explorados: 421
+  Longitud de ruta: 61
 
 A*:
-  Tiempo de ejecución: 0.062803 segundos
-  Nodos explorados: 945
-  Longitud de ruta: 149
+  Tiempo de ejecución: 0.004000 segundos
+  Nodos explorados: 277
+  Longitud de ruta: 61
 
 
 ==================================================
 === Laberinto 20 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (41, 85) (coordenada lógica (20, 42))
-Punto B: (13, 77) (coordenada lógica (6, 38))
-Distancia Manhattan lógica: 18
+Punto A: (31, 41) (coordenada lógica (15, 20))
+Punto B: (45, 85) (coordenada lógica (22, 42))
+Distancia Manhattan lógica: 29
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 1.777180 segundos
-  Nodos explorados: 4125
-  Longitud de ruta: 325
+  Tiempo de ejecución: 0.266945 segundos
+  Nodos explorados: 1912
+  Longitud de ruta: 163
 
 DFS:
-  Tiempo de ejecución: 0.448669 segundos
-  Nodos explorados: 2521
-  Longitud de ruta: 325
+  Tiempo de ejecución: 0.293111 segundos
+  Nodos explorados: 2163
+  Longitud de ruta: 163
 
 Dijkstra:
-  Tiempo de ejecución: 1.566098 segundos
-  Nodos explorados: 4130
-  Longitud de ruta: 325
+  Tiempo de ejecución: 0.164762 segundos
+  Nodos explorados: 1911
+  Longitud de ruta: 163
 
 A*:
-  Tiempo de ejecución: 0.569078 segundos
-  Nodos explorados: 2905
-  Longitud de ruta: 325
+  Tiempo de ejecución: 0.076725 segundos
+  Nodos explorados: 1151
+  Longitud de ruta: 163
 
 
 ==================================================
 === Laberinto 21 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (61, 91) (coordenada lógica (30, 45))
-Punto B: (49, 23) (coordenada lógica (24, 11))
-Distancia Manhattan lógica: 40
+Punto A: (69, 35) (coordenada lógica (34, 17))
+Punto B: (65, 9) (coordenada lógica (32, 4))
+Distancia Manhattan lógica: 15
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 1.971962 segundos
-  Nodos explorados: 4500
-  Longitud de ruta: 241
+  Tiempo de ejecución: 0.038326 segundos
+  Nodos explorados: 896
+  Longitud de ruta: 55
 
 DFS:
-  Tiempo de ejecución: 1.193105 segundos
-  Nodos explorados: 3327
-  Longitud de ruta: 241
+  Tiempo de ejecución: 0.014008 segundos
+  Nodos explorados: 479
+  Longitud de ruta: 55
 
 Dijkstra:
-  Tiempo de ejecución: 2.249722 segundos
-  Nodos explorados: 4492
-  Longitud de ruta: 241
+  Tiempo de ejecución: 0.047057 segundos
+  Nodos explorados: 910
+  Longitud de ruta: 55
 
 A*:
-  Tiempo de ejecución: 0.874795 segundos
-  Nodos explorados: 2835
-  Longitud de ruta: 241
+  Tiempo de ejecución: 0.002000 segundos
+  Nodos explorados: 209
+  Longitud de ruta: 55
 
 
 ==================================================
 === Laberinto 22 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (77, 25) (coordenada lógica (38, 12))
-Punto B: (79, 55) (coordenada lógica (39, 27))
-Distancia Manhattan lógica: 16
+Punto A: (59, 11) (coordenada lógica (29, 5))
+Punto B: (67, 69) (coordenada lógica (33, 34))
+Distancia Manhattan lógica: 33
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.277581 segundos
-  Nodos explorados: 1883
-  Longitud de ruta: 173
+  Tiempo de ejecución: 0.057297 segundos
+  Nodos explorados: 1021
+  Longitud de ruta: 155
 
 DFS:
-  Tiempo de ejecución: 0.449442 segundos
-  Nodos explorados: 2659
-  Longitud de ruta: 173
+  Tiempo de ejecución: 1.795404 segundos
+  Nodos explorados: 4587
+  Longitud de ruta: 155
 
 Dijkstra:
-  Tiempo de ejecución: 0.311720 segundos
-  Nodos explorados: 1882
-  Longitud de ruta: 173
+  Tiempo de ejecución: 0.079545 segundos
+  Nodos explorados: 1023
+  Longitud de ruta: 155
 
 A*:
-  Tiempo de ejecución: 0.071737 segundos
-  Nodos explorados: 1053
-  Longitud de ruta: 173
+  Tiempo de ejecución: 0.047043 segundos
+  Nodos explorados: 979
+  Longitud de ruta: 155
 
 
 ==================================================
 === Laberinto 23 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (31, 49) (coordenada lógica (15, 24))
-Punto B: (57, 95) (coordenada lógica (28, 47))
-Distancia Manhattan lógica: 36
+Punto A: (5, 45) (coordenada lógica (2, 22))
+Punto B: (27, 99) (coordenada lógica (13, 49))
+Distancia Manhattan lógica: 38
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 1.033148 segundos
-  Nodos explorados: 3440
-  Longitud de ruta: 145
+  Tiempo de ejecución: 0.457116 segundos
+  Nodos explorados: 2389
+  Longitud de ruta: 141
 
 DFS:
-  Tiempo de ejecución: 0.167245 segundos
-  Nodos explorados: 1557
-  Longitud de ruta: 145
+  Tiempo de ejecución: 0.013996 segundos
+  Nodos explorados: 529
+  Longitud de ruta: 141
 
 Dijkstra:
-  Tiempo de ejecución: 1.136276 segundos
-  Nodos explorados: 3444
-  Longitud de ruta: 145
+  Tiempo de ejecución: 0.265211 segundos
+  Nodos explorados: 2391
+  Longitud de ruta: 141
 
 A*:
-  Tiempo de ejecución: 0.105527 segundos
-  Nodos explorados: 1137
-  Longitud de ruta: 145
+  Tiempo de ejecución: 0.075744 segundos
+  Nodos explorados: 1095
+  Longitud de ruta: 141
 
 
 ==================================================
 === Laberinto 24 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (83, 105) (coordenada lógica (41, 52))
-Punto B: (33, 107) (coordenada lógica (16, 53))
-Distancia Manhattan lógica: 26
+Punto A: (85, 37) (coordenada lógica (42, 18))
+Punto B: (47, 81) (coordenada lógica (23, 40))
+Distancia Manhattan lógica: 41
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.048988 segundos
-  Nodos explorados: 786
-  Longitud de ruta: 133
+  Tiempo de ejecución: 0.518721 segundos
+  Nodos explorados: 2641
+  Longitud de ruta: 195
 
 DFS:
-  Tiempo de ejecución: 1.054251 segundos
-  Nodos explorados: 3361
-  Longitud de ruta: 133
+  Tiempo de ejecución: 0.326563 segundos
+  Nodos explorados: 2241
+  Longitud de ruta: 195
 
 Dijkstra:
-  Tiempo de ejecución: 0.038065 segundos
-  Nodos explorados: 783
-  Longitud de ruta: 133
+  Tiempo de ejecución: 0.439340 segundos
+  Nodos explorados: 2652
+  Longitud de ruta: 195
 
 A*:
-  Tiempo de ejecución: 0.015483 segundos
-  Nodos explorados: 447
-  Longitud de ruta: 133
+  Tiempo de ejecución: 0.129354 segundos
+  Nodos explorados: 1553
+  Longitud de ruta: 195
 
 
 ==================================================
 === Laberinto 25 ===
 Dimensiones lógicas: 45x55
 Dimensiones de matriz: 91x111
-Punto A: (83, 7) (coordenada lógica (41, 3))
-Punto B: (69, 73) (coordenada lógica (34, 36))
-Distancia Manhattan lógica: 40
+Punto A: (83, 71) (coordenada lógica (41, 35))
+Punto B: (3, 15) (coordenada lógica (1, 7))
+Distancia Manhattan lógica: 68
 
 Resultados por algoritmo:
 BFS:
-  Tiempo de ejecución: 0.045765 segundos
-  Nodos explorados: 827
-  Longitud de ruta: 153
+  Tiempo de ejecución: 2.255589 segundos
+  Nodos explorados: 4577
+  Longitud de ruta: 345
 
 DFS:
-  Tiempo de ejecución: 0.010280 segundos
-  Nodos explorados: 331
-  Longitud de ruta: 153
+  Tiempo de ejecución: 0.571151 segundos
+  Nodos explorados: 2467
+  Longitud de ruta: 345
 
 Dijkstra:
-  Tiempo de ejecución: 0.046811 segundos
-  Nodos explorados: 833
-  Longitud de ruta: 153
+  Tiempo de ejecución: 2.277434 segundos
+  Nodos explorados: 4560
+  Longitud de ruta: 345
 
 A*:
-  Tiempo de ejecución: 0.036922 segundos
-  Nodos explorados: 435
-  Longitud de ruta: 153
+  Tiempo de ejecución: 1.979407 segundos
+  Nodos explorados: 3603
+  Longitud de ruta: 345
 
 

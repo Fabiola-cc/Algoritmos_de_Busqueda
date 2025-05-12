@@ -1,10 +1,10 @@
-=== RESUMEN DE COMPARACIï¿½N DE ALGORITMOS ===
-Basado en 25 laberintos de tamaï¿½o 45x55
+=== RESUMEN DE COMPARACIÓN DE ALGORITMOS ===
+Basado en 25 laberintos de tamaño 45x55
 
 PROMEDIOS POR ALGORITMO:
 Algoritmo  Tiempo (s)      Nodos           Longitud       
 -------------------------------------------------------
-BFS        0.829983        2519.6          204.4          
-DFS        0.931114        2754.7          204.4          
-Dijkstra   0.840618        2519.4          204.4          
-A*         0.417231        1711.6          204.4          
+BFS        0.832914        2754.9          215.1          
+DFS        0.661429        2453.4          215.1          
+Dijkstra   0.852223        2755.4          215.1          
+A*         0.534353        1963.7          215.1          

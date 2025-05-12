@@ -269,9 +269,7 @@ def create_summary_table():
         for rank, algo in enumerate(sorted_algos, 1):
             rankings[metric_key][algo] = rank
     
-    # Calcular ranking promedio
-    avg_rankings = {algo: sum(rankings[m[0]][algo] for m in metrics) / len(metrics) for algo in algoritmos}
-    
+  
     # Guardar resumen en archivo
     with open(os.path.join("resultados", "resumen_final.txt"), 'w') as f:
         f.write("=== RESUMEN DE COMPARACIÓN DE ALGORITMOS ===\n")
