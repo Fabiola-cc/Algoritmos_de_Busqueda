@@ -353,6 +353,41 @@ class MazeGenerator:
         plt.savefig(filename, bbox_inches='tight')
         plt.close()
 
+    def add_cycles(self, num_cycles=10):
+        """
+        Introduce ciclos adicionales en el laberinto, eliminando paredes internas.
+        
+        Args:
+            num_cycles (int): Número de paredes adicionales a eliminar para crear rutas alternativas.
+        """
+        h, w = self.grid.shape
+        attempts = 0
+        added = 0
+
+        while added < num_cycles and attempts < num_cycles * 10:
+            attempts += 1
+
+            # Elegir coordenadas de una posible pared interna (solo coordenadas pares)
+            r = random.randrange(1, h - 1, 2)
+            c = random.randrange(1, w - 1, 2)
+
+            # Revisar posibles direcciones: arriba, abajo, izquierda, derecha
+            directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+            random.shuffle(directions)
+
+            for dr, dc in directions:
+                nr, nc = r + dr, c + dc
+                rr, rc = r + 2 * dr, c + 2 * dc
+
+                if (0 < rr < h and 0 < rc < w and
+                    self.grid[r + dr, c + dc] == 1 and  # Es una pared
+                    self.grid[r, c] == 0 and self.grid[rr, rc] == 0):  # Está entre dos celdas transitables
+
+                    self.grid[r + dr, c + dc] = 0  # Eliminar la pared (crear ciclo)
+                    self.states.append(np.copy(self.grid))
+                    added += 1
+                    break  # Pasamos al siguiente ciclo
+
 
     def compare_algorithms(self, height, width, save_animation=False):
         """
@@ -374,6 +409,9 @@ class MazeGenerator:
         kruskal_entrance = self.entrance
         kruskal_exit = self.exit
         
+        # Aumentar complejidad de los algoritmos
+        self.add_cycles(num_cycles=15)
+
         # Guardar el laberinto de Kruskal
         kruskal_final = np.copy(kruskal_maze)
         
@@ -388,6 +426,9 @@ class MazeGenerator:
         rb_time = time.time() - start_time
         rb_entrance = self.entrance
         rb_exit = self.exit
+
+        # Aumentar complejidad de los algoritmos
+        self.add_cycles(num_cycles=15)
         
         # Guardar el laberinto de Recursive Backtracking
         rb_final = np.copy(rb_maze)
