@@ -414,18 +414,18 @@ class MazeGenerator:
             rb_ani.save('./Maze_results/recursive_backtracking_maze.gif', writer='pillow', fps=10)
             print("Animaciones guardadas como 'kruskal_maze.gif' y 'recursive_backtracking_maze.gif'")
 
-        # Guardar imágenes de los laberintos finales
-        print("\nGuardando resultados finales como PNG")
-        self.entrance = kruskal_entrance
-        self.exit = kruskal_exit
-        self.grid = kruskal_final
-        self.save_maze_image('./Maze_results/kruskal_maze.png', "Laberinto - Kruskal")
+            # Guardar imágenes de los laberintos finales
+            print("\nGuardando resultados finales como PNG")
+            self.entrance = kruskal_entrance
+            self.exit = kruskal_exit
+            self.grid = kruskal_final
+            self.save_maze_image('./Maze_results/kruskal_maze.png', "Laberinto - Kruskal")
 
-        self.entrance = rb_entrance
-        self.exit = rb_exit
-        self.grid = rb_final
-        self.save_maze_image('./Maze_results/recursive_backtracking_maze.png', "Laberinto - Recursive Backtracking")
-        print("Imágenes guardadas como 'kruskal_maze.png' y 'recursive_backtracking_maze.png'")
+            self.entrance = rb_entrance
+            self.exit = rb_exit
+            self.grid = rb_final
+            self.save_maze_image('./Maze_results/recursive_backtracking_maze.png', "Laberinto - Recursive Backtracking")
+            print("Imágenes guardadas como 'kruskal_maze.png' y 'recursive_backtracking_maze.png'")
         
         return kruskal_final, rb_final
 
